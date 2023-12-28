@@ -1,0 +1,793 @@
+@import url(../css/about-us.css);
+@import url(../css/footer.css);
+@import url(../css/product-card.css);
+@import url(../css/carousel.css);
+@import url(../css/contact-us.css);
+@import url(../css/about-us.css);
+@import url(../css/checkout.css);
+@import url(../css/dropdown-nav.css);
+
+*,*:before,*:after{
+    box-sizing:inherit;
+}
+
+* {
+    padding:0;
+    margin:0;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto&display=swap');
+    padding: 0;
+    margin: 0;
+    font-style: normal;
+    line-height: normal;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#main-nav > summary {
+    list-style: none;
+}
+
+:root {
+
+    /* COLORS */
+
+    --primary-color: #1B203D;
+    --primary-40: #A0A3E7;
+    --secondary-color: #6269AD;
+    --background-color:#F3F2FF;
+    --main-text-color:#212121;
+    --gray-20: #D3D5DD;
+    --gray-50: #8B8E96;
+    --UI-white: #fff;
+
+    /* DROP SHADOW */
+
+    --drop-shadow-card: 0px 1px 1px 0px rgba(160, 163, 231, 0.50);
+    --drop-shadow-carousel: 0px 1px 16px 0px rgba(160, 163, 231, 0.7);
+
+
+    /* BUTTON SQUARE BACKGROUND */
+
+    --category-bg-horror: url(../assets/images/button_img/img_horror.jpg);
+    --category-bg-openworld: url(../assets/images/button_img/img_openwolrd.jpg);
+    --category-bg-simualtion: url(../assets/images/button_img/img_simulation.jpg);
+    --category-bg-visualnovel: url(../assets/images/button_img/img_visualnovel.jpg);
+    --category-bg-sport: url(../assets/images/button_img/img_sports.jpg);
+    --category-bg-racing: url(../assets/images/button_img/img_racing.jpg);
+    --category-bg-free: url(../assets/images/button_img/img_free.jpg);
+    --category-bg-coop: url(../assets/images/button_img/img_coop.jpg);
+
+    /* PRODUCT CARD BG */
+
+    --category-bg-forgelegends: url(../assets/images/product-images/GameHub_forgelegends.jpg);
+    --category-bg-assasin: url(../assets/images/product-images/GameHub_assasin.jpg);
+    --category-bg-pingpong: url(../assets/images/product-images/GameHub_pingpong.jpg);
+    --category-bg-racing: url(../assets/images/product-images/GameHub_racing.jpg);
+    --category-bg-boxer: url(../assets/images/product-images/GameHub_boxer.jpg);
+    --category-bg-superduper: url(../assets/images/product-images/GameHub_superduper.jpg);
+    --category-bg-cyberpunk: url(../assets/images/product-images/GameHub_cyberpunk.jpg);
+    --category-bg-spacewars: url(../assets/images/product-images/GameHub_spacewar.jpg);
+    --category-bg-furious: url(../assets/images/product-images/GameHub_furious.jpg);
+
+    /* NEW RELEASES */
+
+    --category-bg-newreleases: url(../assets/images/button_img/img_newreleases.jpg);
+
+    /* CONTACT US */
+
+    --category-bg-faq: url(../assets/images/button_img/img_faq.jpg);
+    --category-bg-customersupport: url(../assets/images/button_img/img_customersupport.jpg);
+
+    /* ABOUT US */
+
+    --category-bg-careers: url(../assets/images/button_img/img_careers.jpg);
+    --category-bg-services: url(../assets/images/button_img/img_services.jpg);
+    --category-bg-sustainability: url(../assets/images/button_img/img_sustainability.jpg);
+}
+
+
+.button-container-square[data-category="horror"] {
+    --category-bg: url(../assets/images/button_img/img_horror.jpg);
+}
+
+.button-container-square[data-category="openworld"] {
+    --category-bg: url(../assets/images/button_img/img_openwolrd.jpg);
+}
+
+.button-container-square[data-category="simualtion"] {
+    --category-bg: url(../assets/images/button_img/img_simulation.jpg);
+}
+
+.button-container-square[data-category="visualnovel"] {
+    --category-bg: url(../assets/images/button_img/img_visualnovel.jpg);
+}
+
+.button-container-square[data-category="sport"] {
+    --category-bg: url(../assets/images/button_img/img_sports.jpg);
+}
+
+.button-container-square[data-category="racing"] {
+    --category-bg: url(../assets/images/button_img/img_racing.jpg);
+}
+
+.button-container-square[data-category="free"] {
+    --category-bg: url(../assets/images/button_img/img_free.jpg);
+}
+
+.button-container-square[data-category="coop"] {
+    --category-bg: url(../assets/images/button_img/img_coop.jpg);
+}
+
+
+
+.button-container-L[data-category="faq"] {
+    --category-bg: url(../assets/images/button_img/img_faq.jpg);
+
+}
+.button-container-L[data-category="customersupport"] {
+    --category-bg: url(../assets/images/button_img/img_customersupport.jpg);
+}
+
+
+.button-container-L[data-category="newreleases"] {
+    --category-bg: url(../assets/images/button_img/img_newreleases.jpg);
+}
+
+
+.button-container-L[data-category="careers"] {
+    --category-bg: url(../assets/images/button_img/img_careers.jpg);
+}
+.button-container-L[data-category="services"] {
+    --category-bg: url(../assets/images/button_img/img_services.jpg);
+}
+.button-container-L[data-category="sustainability"] {
+    --category-bg: url(../assets/images/button_img/img_sustainability.jpg);
+}
+
+.accordion-game-img[data-category="forgelegends"] {
+    --category-bg: url(../assets/images/product-images/GameHub_forgelegends.jpg);
+}
+
+
+
+
+  /* TEXT STYLES */
+
+h1 {
+    color: var(--black90, #212121);
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h1 .alt-text-color {
+    color: var(--secondary-color);
+    font-weight: inherit;
+}
+
+h3 {
+    color: var(--black90, #212121);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h4 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+
+p {
+    font-size: 1.25rem;
+    color: var(--main-text-color);
+    font-weight: 400;
+}
+
+.link {
+    text-decoration: underline;
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+.no-decoration {
+    text-decoration: none;
+    color:var(--main-text-color)
+}
+
+/* TEXT STYLES */
+
+
+/* SECTIONS */
+
+
+.content-container {
+    margin:2rem 1rem;
+    width:100%;
+}
+
+
+body .section h1 {
+    text-wrap: wrap;
+    margin: 1rem auto;
+}
+
+.section {
+    margin: 2rem auto;
+}
+
+.section a {
+    text-decoration: none;
+}
+
+
+
+/* HEADER & NAV */
+
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed relative;
+    color:#212121;
+    background: var(--UI-white);
+    padding: 1rem;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin:0;
+    padding:0;
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
+.header-left {
+    justify-content: flex-start;
+}
+
+
+header a {
+    color:#212121;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 1rem;
+    white-space: nowrap;
+}
+
+summary a {
+    padding:0rem;
+    margin:0rem;
+}
+
+/* LOGO */
+
+.logo img {
+    min-width: 5rem;
+    max-width: 5rem;
+}
+
+.logo a {
+    max-width: 100%;
+}
+
+
+/* BUTTONS */
+
+button {
+    cursor: pointer;
+}
+
+.btn-cta {
+    margin: 0.5rem;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--primary-color);
+
+    /* font */
+    color: var(--UI-white);
+    text-align: center;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.btn-cta a {
+    color: var(--UI-white);
+    text-align: center;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+#close-menu-button {
+    outline:none;
+    background-color: transparent;
+    border:none;
+    padding:0.25rem;
+}
+
+button, .cart {
+    background-color: transparent;
+    color: inherit;
+    border: 0;
+    padding: 1rem;
+    font-size: 1rem;
+}
+#hamburger {
+    cursor: pointer;
+    padding:0.25rem;
+}
+
+
+    /* LONG BUTTON */
+    .btn-cta.long {
+        width:100%;
+        margin:0;
+    }
+
+    /* NEW RELEASES */
+
+body .button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+body .button-wrapper a {
+    width:100%;
+}
+
+body .button-container-L {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding:1rem;
+    min-height:156px;
+    max-width: 1207px;
+    border: 0;
+    border-radius:12px ;
+    background-image: var(--category-bg,none);
+    background-size: cover;
+    background-position: 50% 40%;
+    background-repeat: none;
+    cursor:pointer;
+    box-shadow: var(--drop-shadow-card);
+    overflow: hidden;
+}
+
+body .btn-text-L {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+    height: 100%;
+    width:100%;
+    color: var(--UI-white);
+}
+
+    /* NEW RELEASES */
+
+    /* CONTACT US BUTTONS */
+
+#contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap:1rem;
+}
+
+.button-container-L::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 70%); 
+    z-index: 0; 
+}
+
+#contact-us .btn-text-L {
+    text-align: center;
+
+}
+
+    /* CONTACT US BUTTONS */
+
+    /* BUTTONS SQUARE */
+
+body .buttons-container {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    max-width: 1548px;
+    width: 100%;
+}
+
+body .button-container-square {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height:171px;
+    min-width: 171px;
+    max-width:332px;
+    max-height:auto;
+    aspect-ratio: 1/1;
+    border:0;
+    border-radius:12px ;
+    background-image: var(--category-bg,none);
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    cursor:pointer;
+    box-shadow: var(--drop-shadow-card);
+}
+    /* BUTTONS SQUARE */
+
+
+    /* ACCORDION BUTTON */
+
+.accordion-button-container {
+    flex-grow:inherit;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    background-color: var(--UI-white);
+    width: 100%;
+    max-width: 589px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.accordion-button {
+    flex-grow: inherit;
+    padding: 1rem 2rem;
+    flex-direction: column;
+    width: 100%;
+    height:auto;
+
+}
+
+summary.title-container-button-accordion::marker {
+    display: none;
+}
+
+.title-container-button-accordion {
+    padding:0.5rem;
+    text-transform: uppercase;
+}
+
+.accordion-title {
+    font-weight: 700;
+}
+
+.accordion-button-details-container {
+    flex-grow: inherit;
+    width:100%;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+/* IMAGE */
+
+.game-img-container {
+    margin:0.5rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    height:200px;
+    width:150px;
+}
+
+.accordion-game-img {
+    height:inherit;
+    width:auto;
+    background-image: var(--category-bg,none);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: none;
+}
+
+/* DESCRIPTION */
+
+.summary-description-wrapper {
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:0.5rem 1rem;
+    gap:1rem 0;
+    width:inherit;
+    max-width: 367px ;
+    height:inherit;
+}
+
+.caption-S, .caption-XS, .console, .game-name {
+    color: var(--main-text-color, #212121);
+}
+
+.console, .game-name {
+    font-weight: 700;
+}
+
+
+.console::before {
+    content: " | ";
+    color: var(--gray-50);
+}
+
+/* CAPTION */
+
+.title-caption {
+    display:flex;
+    flex-direction: column;
+}
+
+#colon {
+    color: var(--gray-50);
+}
+
+.caption-XS {
+    font-size: 0.75rem;
+    text-align: left;
+}
+
+#colon::after {
+    content: ": ";
+}
+
+.gamename + .console {
+    font-size: 1rem;
+}
+
+/* PRICE */
+
+.caption-price {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:0.5rem;
+}
+
+.caption-S {
+    color: var(--secondary-color);
+    font-weight: 400;
+}
+
+/* TOTAL */
+
+.total-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+    /* ACCORDION BUTTON */
+
+
+/* CART */
+
+header .cart-container {
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin:0;
+    padding:0;
+}
+
+/* DESKTOP */
+
+header .show-on-desktop, .search-container {
+    display:none;
+}
+
+
+body {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--main-text-color);
+    background-color: var(--background-color);
+    box-sizing:border-box;
+}
+
+@media screen and (min-width:1000px) {
+    header .show-on-desktop, #search {
+        display:block;
+    }
+
+    #hamburger {
+        display:none;
+    }
+
+
+    header details {
+        cursor: pointer;
+    }
+
+    /* SEARCH */
+
+    header .search-container {
+        display:block;
+        padding:0;
+        border-bottom:solid 0.16rem var(--secondary-color);
+    }
+
+    header form {
+        display:flex;
+        flex-direction: row;
+        height:3rem;
+        max-width: 12rem;
+    }
+
+    form #search {
+        padding: 0; 
+        margin:0;
+        border:0;
+    }
+
+    input::placeholder {
+        color: var(--secondary-color);
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
+
+    button.search-btn {
+        margin:0.5rem;
+        padding:0.5rem;
+    }
+
+    /* CAROUSEL */
+
+    body .slider {
+        aspect-ratio: 12/3;
+        flex-direction: row; 
+        width: 100%; 
+        scroll-snap-type: none; 
+        overflow-x: hidden;
+    }
+
+    body .slider img {
+        flex: 0 0 100%; 
+        scroll-snap-align: start; 
+        object-position:center 70%;
+    }
+
+    body #slide-2 {
+        object-position: center 30%;
+    }
+
+    body #slide-3 {
+        object-position: center center;
+    }
+
+    body #slide-4 {
+        object-position: center 40%;   
+    }
+
+    /* PRODUCT CARD */
+
+    body .product-card-container {
+        display: flex;
+        width: 363px;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    body .product-card-image {
+        max-height:484px;
+        max-width:363px;
+        flex-shrink:0;
+    }
+
+    body .product-image {
+        min-height:484px;
+        width:363px;    
+    }
+
+    /* BUTTON XL */
+
+    body .button-container-L {
+        height:332px;
+        max-width: 1207px;
+    }
+
+    body .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+    }
+
+    body .button-wrapper a {
+        width:100%;
+    }
+
+
+    /* BUTTON SQUARE */
+
+    body .buttons-container {
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
+    }
+
+    /* SECONDARY BUTTONS */
+    .buttons-wrapper-products-page {
+        display:flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
+
+    /* ACCORDION BUTTON */
+
+    .accordion-button-details-container {
+        display: flex;
+        width:100%;
+        flex-direction: row;
+        padding: 1rem 0;
+    }
+
+    .button-wrapper-checkout {
+        display: flex;
+        justify-content:center;
+        width:100%;
+        max-width: 589px;     
+    }
+
+    /* CONTACT US BUTTONS */
+
+    #contact-us {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-height:332px;
+        gap:1rem;
+    }
+
+    /* SECTIONS */
+
+    .section {
+        width:100%;
+    }
+
+    .shipping-button-square-group {
+        display: grid;
+        width:auto;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 0.5rem; 
+        width:500px
+    }
+
+    .game-list-wrapper-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+}

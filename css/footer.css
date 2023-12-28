@@ -1,0 +1,78 @@
+@import url(../css/index.css);
+
+
+
+/* Top section */
+
+footer .footer-top-container {
+    display: flex;
+    padding: 1.5rem 1rem;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-color, #1B203D);
+}
+
+/* Logo */
+
+footer .footer-logo {
+    display: flex;
+    min-width: 7rem;
+    max-width: 7rem;
+    margin-bottom: 1rem;
+}
+
+footer .footer-logo img {
+    width:100%;
+}
+
+
+/* Social Media Icons */
+
+footer .footer-social-media-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Bottom Section */
+
+footer .footer-links-section {
+    display: flex;
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    align-self: stretch;
+}
+
+
+/* Links */
+
+footer .footer-links a {
+    text-decoration: none;
+    color: var(--primary-color, #1B203D);
+}
+
+footer .footer-links a + a::before {
+    content: " | "; 
+    padding: 0.25rem; 
+}
+
+footer .footer-links {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 1rem;
+    flex: 1 0 0;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+
+/* Copyright */
+footer .footer-copyright {
+    align-self: stretch;
+    color: var(--main-text-color, #212121);
+    font-size: 0.75rem;
+    font-weight: 100;
+}
